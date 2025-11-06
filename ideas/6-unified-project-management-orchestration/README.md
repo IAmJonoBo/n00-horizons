@@ -14,7 +14,7 @@ tags:
 - knowledge/idea
 review_date: '2025-02-01'
 erpnext_project: null
-github_project: null
+github_project: https://github.com/users/IAmJonoBo/projects/5
 links:
 - type: charter
   path: ../../../../n00tropic_HQ/99. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
