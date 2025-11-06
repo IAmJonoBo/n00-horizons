@@ -1,18 +1,25 @@
-# Idea: Unified Project Management Orchestration
-
 ---
-metadata:
-  id: idea-006
-  lifecycle_stage: discover
-  tags:
-    - governance/project-management
-    - automation/n00t
-    - integration/erpnext
-  owner: product-office
-  requested_by: leadership-council
-  source: internal-initiative
-  created: 2025-01-14
-  review_date: 2025-02-01
+id: idea-006
+title: Unified Project Management Orchestration
+lifecycle_stage: discover
+status: proposed
+owner: product-office
+sponsors:
+  - leadership-council
+source: internal-initiative
+tags:
+  - governance/project-management
+  - automation/n00t
+  - integration/erpnext
+review_date: "2025-02-01"
+erpnext_project: null
+github_project: null
+links:
+  - type: charter
+    path: ../../../../n00tropic_HQ/99. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
+---
+
+# Idea: Unified Project Management Orchestration
 
 ## Problem Statement
 
