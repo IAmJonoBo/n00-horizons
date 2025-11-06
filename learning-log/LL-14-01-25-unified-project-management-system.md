@@ -8,6 +8,7 @@ tags:
   - governance/project-management
   - automation/n00t
   - integration/erpnext
+  - knowledge/learning-log
 review_date: "2025-02-14"
 erpnext_project: null
 github_project: null

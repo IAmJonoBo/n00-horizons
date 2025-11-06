@@ -27,3 +27,13 @@ Research & development hub for n00tropic. This repository captures ideation, exp
 5. **Promote** — Once successful, raise pull requests in the downstream repos (n00t, n00-frontiers, n00-cortex) and update the GitHub Project board.
 
 See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers. Starter kits/staging assets migrated from the temporary `stuff/` directory are catalogued in `n00-frontiers/docs/overview/starter-kits.md`.
+
+## Metadata & Automation
+
+- All idea briefs (`ideas/**/README.md`), learning logs (`learning-log/LL-*.md`), and internal project charters (`../n00tropic_HQ/99. Internal-Projects/**`) must include YAML front matter conforming to the shared schema (`n00-cortex/schemas/project-metadata.schema.json`).
+- Use n00t capabilities for lifecycle management:
+  - `project.recordIdea` – scaffold a new idea directory with compliant metadata.
+  - `project.ingestMarkdown` – retrofit metadata onto existing docs or update owners/tags/status in place.
+  - `project.capture` / `project.sync.*` – validate, register, and surface upstream/downstream impacts before coordination with GitHub or ERPNext.
+- Run `.dev/automation/scripts/validate-project-metadata.py` prior to merges; the check blocks drift (missing links, invalid tags, duplicate IDs).
+- Canonical tags live in `n00-cortex/data/catalog/project-tags.yaml`. Submit changes via PRs and use `.dev/automation/scripts/autofix-project-metadata.py --apply` to canonicalise aliases locally.

@@ -1,23 +1,26 @@
 ---
-summary: "Agent learning record from [problem type/context]"
-version: "1.0.0"
-created_date: "2025-11-06"
-created_tz: "UTC"
-last_updated: "2025-11-06"
-agent_id: "[agent identifier or 'human']"
-context: "[development, debugging, automation, etc.]"
-problem_type: "[complex-problem, recurring-issue, conflict, performance, error-handling, etc.]"
-severity: "[low, medium, high, critical]"
+id: learn-YYYY-MM-DD-topic
+title: "[Descriptive Title]"
+lifecycle_stage: discover
+status: draft
+owner: "[primary owner or team]"
 tags:
   - learning-log
-  - agent-learning
+  - knowledge/learning-log
   - "[additional relevant tags]"
-related_files:
-  - "[file paths involved]"
-related_issues:
-  - "[GitHub issue URLs or IDs]"
-related_prs:
-  - "[Pull request URLs or IDs]"
+review_date: "YYYY-MM-DD"
+erpnext_project: null
+github_project: null
+links:
+  - type: project
+    path: ../ideas/example/README.md
+related_projects:
+  - project-foo-bar
+recorded: "YYYY-MM-DD"
+agent_id: "[agent identifier or 'human']"
+context: "[development, debugging, automation, etc.]"
+problem_type: "[complex-problem, recurring-issue, performance, error-handling, etc.]"
+severity: "[low, medium, high, critical]"
 training_potential: "[high, medium, low, none]"
 ---
 
