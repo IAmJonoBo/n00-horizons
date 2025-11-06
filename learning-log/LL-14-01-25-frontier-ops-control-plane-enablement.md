@@ -39,12 +39,12 @@ recorded: '2025-11-06'
 ## Actions Taken
 
 1. Added defensive import fallback in the project-management post-gen hook so `_shared` utilities are optional.
-2. Created `.dev/automation/scripts/github-project-apply-blueprint.sh` to automate project creation with required flags and clear output for metadata updates.
+2. Created `.dev/automation/scripts/github-project-apply-blueprint.sh` with template-number awareness so `gh project copy` always receives required flags, plus fallbacks when running without a template ID.
 3. Updated the project orchestration runbook to surface the new script, blueprint workflow, and automation ordering for agents.
-4. Logged Grafana + alert automation expectations in the one-pager and this learning record to guide pilot execution.
+4. Captured baseline Grafana dashboard + alert definitions under `observability/` and linked them from the charter so telemetry expectations are codified.
 
 ## Next Steps
 
 - Wire baseline Grafana dashboard + alert rules, commit JSON definitions, and attach to the project backlog.
-- Import `PM-FOPS-CTRL` blueprint into ERPNext staging and record execution in project sync artefacts.
+- Import `PM-FOPS-CTRL` blueprint into ERPNext staging using the published script stub and record execution in project sync artefacts.
 - Capture automation results via `project.sync.github`/`project.sync.erpnext` and update the control-plane charter with observations.
