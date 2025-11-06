@@ -1,0 +1,58 @@
+name: Horizon Experiment
+description: Track an active experiment through execution.
+title: "[EXP] <experiment name>"
+labels: ["experiment", "in-flight"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Link to the experiment brief in `docs/` and the lab workspace under `experiments/`.
+  - type: input
+    id: brief
+    attributes:
+      label: Experiment brief
+      placeholder: "docs/experiments/<slug>.md"
+    validations:
+      required: true
+  - type: input
+    id: workspace
+    attributes:
+      label: Experiment workspace
+      placeholder: "experiments/<date>-<slug>"
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: "What are we trying to validate?"
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Success metrics
+      description: "Quantitative or qualitative metrics collected during the experiment."
+    validations:
+      required: true
+  - type: textarea
+    id: automation_link
+    attributes:
+      label: Automation linkage
+      description: "Which n00t capabilities / n00-school pipelines / templates will be produced or updated?"
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & safety considerations
+      description: "Enumerate safety, ethics, or compliance checks required."
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Current status
+      description: "Summarise progress, blockers, and next actions."
+    validations:
+      required: true
