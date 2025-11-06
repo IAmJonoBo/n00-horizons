@@ -26,4 +26,4 @@ Research & development hub for n00tropic. This repository captures ideation, exp
 4. **Automate** — Wire training or evaluation through `n00t` (e.g., use the `school.trainingRun` capability with the new n00-school pipelines).
 5. **Promote** — Once successful, raise pull requests in the downstream repos (n00t, n00-frontiers, n00-cortex) and update the GitHub Project board.
 
-See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers.
+See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers. Starter kits/staging assets migrated from the temporary `stuff/` directory are catalogued in `n00-frontiers/docs/overview/starter-kits.md`.
