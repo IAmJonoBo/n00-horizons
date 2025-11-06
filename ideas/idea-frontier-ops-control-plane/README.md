@@ -18,7 +18,7 @@ review_date: '2025-12-21'
 erpnext_project: PM-FOPS-CTRL
 github_project: https://github.com/users/IAmJonoBo/projects/5
 links:
-- type: project
+- type: charter
   path: ../../../../n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 created: '2025-11-06'
 ---
