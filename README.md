@@ -10,13 +10,14 @@ Research & development hub for n00tropic. This repository captures ideation, exp
 
 ## Repository layout
 
-| Path | Purpose |
-| ---- | ------- |
-| `.github/ISSUE_TEMPLATE/` | Idea + experiment templates with required metadata fields. |
-| `docs/` | Operating notes, programme guides, experiment briefs. |
-| `docs/templates/` | Markdown scaffolds used when authoring new briefs or lab notes. |
-| `experiments/` | Time-sequenced experiment directories with lab notes and datasets. |
-| `scripts/` | Utility automation (e.g., bootstrap a new experiment folder). |
+| Path                          | Purpose                                                                                |
+| ----------------------------- | -------------------------------------------------------------------------------------- |
+| `.github/ISSUE_TEMPLATE/`     | Idea + experiment templates with required metadata fields.                             |
+| `docs/`                       | Operating notes, programme guides, experiment briefs.                                  |
+| `docs/task-slice-playbook.md` | Canonical guide for slicing tasks, tagging, and recording upstream/downstream impacts. |
+| `docs/templates/`             | Markdown scaffolds used when authoring new briefs or lab notes.                        |
+| `experiments/`                | Time-sequenced experiment directories with lab notes and datasets.                     |
+| `scripts/`                    | Utility automation (e.g., bootstrap a new experiment folder).                          |
 
 ## Workflow
 

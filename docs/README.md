@@ -5,6 +5,7 @@ This directory stores working documents that complement the guidance in the [n00
 - `experiments/` — experiment-specific briefs (one per initiative).
 - `programmes/` — optional programme or initiative overviews.
 - `templates/` — markdown scaffolds for new briefs and lab notes.
+- `upstream-downstream-ops-sync-playbook.md` — Agent-ready runbook for anticipating upstream/downstream impacts and syncing boards, observability, and metadata.
 
 ## Experiment brief lifecycle
 

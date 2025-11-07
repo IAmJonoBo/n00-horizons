@@ -5,23 +5,24 @@ lifecycle_stage: discover
 status: recorded
 owner: platform-ops
 tags:
-- governance/project-management
-- automation/n00t
-- integration/erpnext
-- dx/frontier-standards
-- knowledge/learning-log
-review_date: '2025-02-14'
+  - governance/project-management
+  - automation/n00t
+  - integration/erpnext
+  - dx/frontier-standards
+  - knowledge/learning-log
+review_date: "2025-02-14"
 erpnext_project: PM-FOPS-CTRL
-github_project: https://github.com/users/IAmJonoBo/projects/5
+github_project: https://github.com/users/IAmJonoBo/projects/6
 links:
-- type: idea
-  path: ../ideas/idea-frontier-ops-control-plane/README.md
-- type: project
-  path: ../../../n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
+  - type: idea
+    path: ../ideas/idea-frontier-ops-control-plane/README.md
+  - type: project
+    path: ../../../n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 related_projects:
-- project-frontier-ops-control-plane
-recorded: '2025-11-06'
+  - project-frontier-ops-control-plane
+recorded: "2025-11-06"
 ---
+
 # Learning Log – Frontier Ops Control Plane Enablement
 
 ## Observations
@@ -29,6 +30,7 @@ recorded: '2025-11-06'
 - Cookiecutter post-gen hook failed outside the n00-frontiers repo because `_shared` wasn’t on `PYTHONPATH`, halting non-interactive provisioning.
 - GitHub CLI `gh project copy` surfaced the “required flag(s) "title" not set” error, blocking blueprint application when guardrails were absent.
 - Control-plane pilot lacked a standard script to prime dashboards/alerts, and there was no documented path for agents to complete the Grafana+alert baseline work.
+- ERPNext blueprint import (PM-FOPS-CTRL → PROJ-0001) succeeded; response archived at `n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/erpnext/erpnext_import_resp.json`.
 
 ## Insights
 
@@ -42,9 +44,11 @@ recorded: '2025-11-06'
 2. Created `.dev/automation/scripts/github-project-apply-blueprint.sh` with template-number awareness so `gh project copy` always receives required flags, plus fallbacks when running without a template ID.
 3. Updated the project orchestration runbook to surface the new script, blueprint workflow, and automation ordering for agents.
 4. Captured baseline Grafana dashboard + alert definitions under `observability/` and linked them from the charter so telemetry expectations are codified.
+5. Cloned the canonical GitHub project template (`#5`) into a dedicated control-plane board (`#6`) via `.dev/automation/scripts/github-project-apply-blueprint.sh`.
+6. Ran `.dev/automation/scripts/erpnext-import-blueprint.sh` against the local ERPNext stack; import failed because the `project` app (provider of `project.api.import_blueprint`) is not installed. Logged output in `/tmp/erpnext_import_resp.json` for follow-up once the app is available.
 
 ## Next Steps
 
-- Wire baseline Grafana dashboard + alert rules, commit JSON definitions, and attach to the project backlog.
-- Import `PM-FOPS-CTRL` blueprint into ERPNext staging using the published script stub and record execution in project sync artefacts.
+- Wire baseline Grafana dashboard + alert rules in staging, capture the Grafana import run ID, and append it to this log.
+- Re-run `erpnext-import-blueprint.sh` once the `project` app is deployed so the PM-FOPS-CTRL blueprint lands cleanly; confirm via `project.sync.erpnext` artefact update.
 - Capture automation results via `project.sync.github`/`project.sync.erpnext` and update the control-plane charter with observations.

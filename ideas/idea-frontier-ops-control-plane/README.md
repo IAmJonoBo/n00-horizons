@@ -5,23 +5,26 @@ lifecycle_stage: discover
 status: proposed
 owner: platform-ops
 sponsors:
-- product-office
-- delivery
+  - product-office
+  - delivery
 source: operations-roadmap
 tags:
-- governance/project-management
-- automation/n00t
-- integration/erpnext
-- dx/frontier-standards
-- knowledge/idea
-review_date: '2025-12-21'
+  - governance/project-management
+  - automation/n00t
+  - integration/erpnext
+  - dx/frontier-standards
+  - knowledge/idea
+review_date: "2025-12-21"
 erpnext_project: PM-FOPS-CTRL
-github_project: https://github.com/users/IAmJonoBo/projects/5
+github_project: https://github.com/users/IAmJonoBo/projects/6
 links:
-- type: charter
-  path: ../../../../n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
-created: '2025-11-06'
+  - type: charter
+    path: ../../../../n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
+  - type: learning-log
+    path: ../../learning-log/LL-14-01-25-frontier-ops-control-plane-enablement.md
+created: "2025-11-06"
 ---
+
 # Idea: Frontier Ops Control Plane
 
 ## Problem Statement
