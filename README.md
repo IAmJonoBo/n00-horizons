@@ -29,6 +29,12 @@ Research & development hub for n00tropic. This repository captures ideation, exp
 
 See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers. Starter kits/staging assets migrated from the temporary `stuff/` directory are catalogued in `n00-frontiers/docs/overview/starter-kits.md`.
 
+## Job Intake & Tracking
+
+- Follow [`docs/job-pipeline.md`](docs/job-pipeline.md) to promote any idea/experiment into a tracked job with consistent metadata.
+- Use the n00t capabilities `project.recordJob`, `project.capture`, and `project.sync.*` to register, validate, and sync jobs with GitHub Projects + ERPNext.
+- All job artefacts live under `jobs/<job-id>/README.md` and include the frontier-grade quality gates, telemetry hooks, and traceability expectations defined in the template.
+
 ## Metadata & Automation
 
 - All idea briefs (`ideas/**/README.md`), learning logs (`learning-log/LL-*.md`), and internal project charters (`../n00tropic_HQ/99. Internal-Projects/**`) must include YAML front matter conforming to the shared schema (`n00-cortex/schemas/project-metadata.schema.json`).
@@ -36,5 +42,5 @@ See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers
   - `project.recordIdea` – scaffold a new idea directory with compliant metadata.
   - `project.ingestMarkdown` – retrofit metadata onto existing docs or update owners/tags/status in place.
   - `project.capture` / `project.sync.*` – validate, register, and surface upstream/downstream impacts before coordination with GitHub or ERPNext.
-- Run `.dev/automation/scripts/validate-project-metadata.py` prior to merges; the check blocks drift (missing links, invalid tags, duplicate IDs).
+- Run `.dev/automation/scripts/validate-project-metadata.py` prior to merges; the check blocks drift (missing links, invalid tags, duplicate IDs). Jobs under `jobs/` are automatically included.
 - Canonical tags live in `n00-cortex/data/catalog/project-tags.yaml`. Submit changes via PRs and use `.dev/automation/scripts/autofix-project-metadata.py --apply` to canonicalise aliases locally.
