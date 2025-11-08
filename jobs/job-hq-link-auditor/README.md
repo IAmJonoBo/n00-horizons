@@ -7,7 +7,7 @@ owner: frontiers-core
 sponsors:
   - platform-ops
 source: internal
-review_date: 2025-12-31
+review_date: "2025-12-31"
 erpnext_project: null
 github_project: null
 tags:
@@ -16,9 +16,9 @@ tags:
   - dx/frontier-standards
 links:
   - type: doc
-    path: n00tropic_HQ/START HERE/README.md
+    path: ../../../../n00tropic_HQ/START HERE/README.md
   - type: doc
-    path: n00tropic-cerebrum/n00tropic/README.md
+    path: ../../../n00tropic/README.md
 ---
 
 # Job: HQ ↔ Generator Link Auditor

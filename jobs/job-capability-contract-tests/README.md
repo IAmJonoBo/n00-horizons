@@ -7,7 +7,7 @@ owner: platform-ops
 sponsors:
   - product-office
 source: internal
-review_date: 2025-12-31
+review_date: "2025-12-31"
 erpnext_project: null
 github_project: null
 tags:
@@ -17,9 +17,9 @@ tags:
   - dx/developer-experience
 links:
   - type: doc
-    path: n00tropic-cerebrum/n00t/capabilities/manifest.json
+    path: ../../../n00t/capabilities/manifest.json
   - type: adr
-    path: n00tropic-cerebrum/1. Cerebrum Docs/ADR/ADR-004-unified-project-management-system.md
+    path: ../../../1. Cerebrum Docs/ADR/ADR-004-unified-project-management-system.md
 ---
 
 # Job: Capability Contract Test Harness

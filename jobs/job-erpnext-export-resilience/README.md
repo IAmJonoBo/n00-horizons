@@ -7,7 +7,7 @@ owner: platform-ops
 sponsors:
   - finance-ops
 source: internal
-review_date: 2025-12-31
+review_date: "2025-12-31"
 erpnext_project: null
 github_project: null
 tags:
@@ -17,9 +17,9 @@ tags:
   - governance/project-management
 links:
   - type: doc
-    path: n00tropic-cerebrum/.dev/automation/scripts/erpnext-export.sh
+    path: ../../../../.dev/automation/scripts/erpnext-export.sh
   - type: doc
-    path: n00tropic_HQ/12-Platform-Ops/README.md
+    path: ../../../../n00tropic_HQ/12-Platform-Ops/README.md
 ---
 
 # Job: ERPNext Export Resilience Guardrails

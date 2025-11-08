@@ -7,7 +7,7 @@ owner: platform-ops
 sponsors:
   - product-office
 source: internal
-review_date: 2025-12-31
+review_date: "2025-12-31"
 erpnext_project: null
 github_project: null
 tags:
@@ -18,9 +18,9 @@ tags:
   - integration/erpnext
 links:
   - type: adr
-    path: n00tropic-cerebrum/1. Cerebrum Docs/ADR/ADR-004-unified-project-management-system.md
+    path: ../../../1. Cerebrum Docs/ADR/ADR-004-unified-project-management-system.md
   - type: doc
-    path: n00tropic-cerebrum/n00-horizons/docs/job-pipeline.md
+    path: ../../docs/job-pipeline.md
 ---
 
 # Job: Control Tower – Registry & Lifecycle Audits

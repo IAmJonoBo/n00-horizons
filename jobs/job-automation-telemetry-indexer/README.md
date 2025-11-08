@@ -7,7 +7,7 @@ owner: platform-ops
 sponsors:
   - product-office
 source: internal
-review_date: 2025-12-31
+review_date: "2025-12-31"
 erpnext_project: null
 github_project: null
 tags:
@@ -16,9 +16,9 @@ tags:
   - dx/developer-experience
 links:
   - type: doc
-    path: n00tropic_HQ/12-Platform-Ops/telemetry
+    path: ../../../../n00tropic_HQ/12-Platform-Ops/telemetry
   - type: doc
-    path: n00tropic-cerebrum/.dev/automation/scripts/record-capability-run.py
+    path: ../../../../.dev/automation/scripts/record-capability-run.py
 ---
 
 # Job: Automation Telemetry Indexer & SLO Dashboard

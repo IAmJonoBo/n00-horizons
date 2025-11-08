@@ -7,7 +7,7 @@ owner: frontiers-core
 sponsors:
   - platform-ops
 source: internal
-review_date: 2025-12-31
+review_date: "2025-12-31"
 erpnext_project: null
 github_project: null
 tags:
@@ -17,9 +17,9 @@ tags:
   - automation/ci-cd
 links:
   - type: doc
-    path: n00tropic-cerebrum/n00-frontiers/docs/overview
+    path: ../../../n00-frontiers/docs/overview
   - type: doc
-    path: n00tropic-cerebrum/n00-cortex/data/toolchain-manifest.json
+    path: ../../../n00-cortex/data/toolchain-manifest.json
 ---
 
 # Job: Schema ↔ Template Parity Auditor
