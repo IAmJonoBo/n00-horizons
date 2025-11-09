@@ -27,7 +27,7 @@ Keep multiple project briefs, plans, and handover notes in sync by flagging conf
 
 ## Workflow
 
-1. **Generate slices** – run `npm run handover:auto` (or CI workflow) so `scripts/slicing/slice_plan.py` ingests `Next_Steps*.md`, Horizons docs, and `n00tropic_HQ/99. Internal-Projects/**`.
+1. **Generate slices** – run `npm run handover:auto` (or CI workflow) so `scripts/slicing/slice_plan.py` ingests `Next_Steps*.md`, Horizons docs, and `n00tropic_HQ/98. Internal-Projects/**`.
 2. **Inspect flags** – conflicts appear in `artifacts/slices.enriched.json[].metadata.flags` and in the automation log append (`docs/automation/LL-14-01-25-frontier-ops-control-plane-enablement.md`).
 3. **Triage** – for each flag:
    - `conflict/document-id/<id>` – multiple documents share the same `id`. Decide the source of truth, update front matter, or merge content.

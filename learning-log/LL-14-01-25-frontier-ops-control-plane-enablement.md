@@ -10,14 +10,14 @@ tags:
   - integration/erpnext
   - dx/frontier-standards
   - knowledge/learning-log
-review_date: "2025-02-14"
+review_date: "2026-03-31"
 erpnext_project: PM-FOPS-CTRL
 github_project: https://github.com/users/IAmJonoBo/projects/6
 links:
   - type: idea
     path: ../ideas/idea-frontier-ops-control-plane/README.md
   - type: project
-    path: ../../../n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
+    path: ../../../n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 related_projects:
   - project-frontier-ops-control-plane
 recorded: "2025-11-06"
@@ -30,7 +30,7 @@ recorded: "2025-11-06"
 - Cookiecutter post-gen hook failed outside the n00-frontiers repo because `_shared` wasn’t on `PYTHONPATH`, halting non-interactive provisioning.
 - GitHub CLI `gh project copy` surfaced the “required flag(s) "title" not set” error, blocking blueprint application when guardrails were absent.
 - Control-plane pilot lacked a standard script to prime dashboards/alerts, and there was no documented path for agents to complete the Grafana+alert baseline work.
-- ERPNext blueprint import (PM-FOPS-CTRL → PROJ-0001) succeeded; response archived at `n00tropic_HQ/99. Internal-Projects/IP-3-frontier-ops-control-plane/erpnext/erpnext_import_resp.json`.
+- ERPNext blueprint import (PM-FOPS-CTRL → PROJ-0001) succeeded; response archived at `n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/erpnext/erpnext_import_resp.json`.
 
 ## Insights
 

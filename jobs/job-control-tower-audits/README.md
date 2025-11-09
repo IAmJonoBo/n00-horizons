@@ -8,8 +8,8 @@ sponsors:
   - product-office
 source: internal
 review_date: "2025-12-31"
-erpnext_project: null
-github_project: null
+erpnext_project: PM-FOPS-CTRL
+github_project: https://github.com/users/IAmJonoBo/projects/6
 tags:
   - delivery/job
   - governance/project-management
@@ -48,6 +48,8 @@ Build the nightly “control tower” auditor that reconciles every metadata doc
 - Register outputs via `project.capture` after each milestone.
 - Log run metadata to `.dev/automation/artifacts/automation/agent-runs.json` with `capability=project.controlTower` (new capability to be added).
 - Reference run IDs when updating ERPNext Projects or GitHub issues.
+- Publish a human-readable snapshot by regenerating [`docs/control-panel.md`](../../docs/control-panel.md) via `project.controlPanel`; this wires the lifecycle radar JSON, latest preflight artefacts, and outstanding job list straight into the planning dashboard so the Control Tower view always reflects the current readiness signal.
+- Embed the generated panel (or link to it) in Control Tower status updates and escalate any `status = attention` entries before the nightly job runs.
 
 ## Notes & Updates
 

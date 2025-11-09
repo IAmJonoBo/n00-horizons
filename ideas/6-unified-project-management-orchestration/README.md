@@ -5,20 +5,21 @@ lifecycle_stage: discover
 status: proposed
 owner: product-office
 sponsors:
-- leadership-council
+  - leadership-council
 source: internal-initiative
 tags:
-- governance/project-management
-- automation/n00t
-- integration/erpnext
-- knowledge/idea
-review_date: '2025-02-01'
-erpnext_project: null
+  - governance/project-management
+  - automation/n00t
+  - integration/erpnext
+  - knowledge/idea
+review_date: "2026-03-31"
+erpnext_project: PM-UNIFIED
 github_project: https://github.com/users/IAmJonoBo/projects/5
 links:
-- type: charter
-  path: ../../../../n00tropic_HQ/99. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
+  - type: charter
+    path: ../../../../n00tropic_HQ/98. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
 ---
+
 # Idea: Unified Project Management Orchestration
 
 ## Problem Statement

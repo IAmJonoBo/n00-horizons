@@ -37,7 +37,7 @@ See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers
 
 ## Metadata & Automation
 
-- All idea briefs (`ideas/**/README.md`), learning logs (`learning-log/LL-*.md`), and internal project charters (`../n00tropic_HQ/99. Internal-Projects/**`) must include YAML front matter conforming to the shared schema (`n00-cortex/schemas/project-metadata.schema.json`).
+- All idea briefs (`ideas/**/README.md`), learning logs (`learning-log/LL-*.md`), and internal project charters (`../n00tropic_HQ/98. Internal-Projects/**`) must include YAML front matter conforming to the shared schema (`n00-cortex/schemas/project-metadata.schema.json`).
 - Use n00t capabilities for lifecycle management:
   - `project.recordIdea` – scaffold a new idea directory with compliant metadata.
   - `project.ingestMarkdown` – retrofit metadata onto existing docs or update owners/tags/status in place.

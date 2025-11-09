@@ -14,7 +14,7 @@ erpnext_project: null
 github_project: null
 links:
   - type: project
-    path: ../../../n00tropic_HQ/99. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
+    path: ../../../n00tropic_HQ/98. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
 related_projects:
   - project-ip-002
 recorded: "2025-01-14"

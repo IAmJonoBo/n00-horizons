@@ -8,8 +8,8 @@ sponsors:
   - product-office
 source: internal
 review_date: "2025-12-31"
-erpnext_project: null
-github_project: null
+erpnext_project: PM-UNIFIED
+github_project: https://github.com/users/IAmJonoBo/projects/5
 tags:
   - delivery/job
   - automation/n00t

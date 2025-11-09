@@ -9,7 +9,7 @@ This playbook defines the canonical task taxonomy, metadata rules, and upstream/
 | Slice Type          | Description                                               | Default Tags                                       | Typical Artefacts                            |
 | ------------------- | --------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------- |
 | **Idea Intake**     | Discovery notes, hypotheses, decision records.            | `governance/project-management`, `knowledge/idea`  | `n00-horizons/ideas/**/README.md`            |
-| **Charter/Project** | One-pagers, milestones, funding/impact statements.        | `governance/project-management`, `automation/n00t` | `n00tropic_HQ/99. Internal-Projects/IP-*/`   |
+| **Charter/Project** | One-pagers, milestones, funding/impact statements.        | `governance/project-management`, `automation/n00t` | `n00tropic_HQ/98. Internal-Projects/IP-*/`   |
 | **Milestone**       | Sprint goals, deliverables, rollout phases.               | `delivery/milestone`, parent slice tags            | `IP-*/TASKS.md`, GitHub issues               |
 | **Instrumentation** | Grafana dashboards, alerts, telemetry pipelines.          | `observability/grafana`, `integration/erpnext`     | `observability/**`, Grafana JSON, alert YAML |
 | **Automation**      | Scripts, CLI wrappers, cookbooks (n00t, ERPNext, GitHub). | `automation/n00t`, `integration/github`            | `.dev/automation/scripts/**`                 |
@@ -30,7 +30,9 @@ All tasks must map to one or more slices; use `links[]` to point to their parent
    .dev/automation/scripts/project-sync-erpnext.sh --path <doc>
    ```
    Downstream reminders show what needs updating (GitHub board, ERPNext blueprint, learning log).
-4. **Task exports** – to copy a slice elsewhere, run `project-ingest-markdown.sh --path <doc> --kind project --owner <team>` in the destination repo. Metadata is preserved and re-registered.
+4. **Readiness Gate** – before setting a slice to `deliver`/`in-progress`, execute `.dev/automation/scripts/project-preflight.sh --path <doc>` (or call `project.preflight`) to chain the capture + sync runs and ensure `links[]`, `review_date`, and integration IDs are all populated.
+   - Use `.dev/automation/scripts/project-preflight-batch.sh --include-registry` during planning or audits to fan out the same gate across every catalogued artefact so GitHub/ERPNext drift is surfaced in one report.
+5. **Task exports** – to copy a slice elsewhere, run `project-ingest-markdown.sh --path <doc> --kind project --owner <team>` in the destination repo. Metadata is preserved and re-registered.
 
 ---
 
@@ -65,5 +67,6 @@ Include the worksheet in the artefact or in a linked learning log entry so futur
 - Batch small instrumentation tasks under a "Milestone" slice and refer back to the parent idea+project within `links[]`.
 - Use labels (`task/milestone`, `task/automation`, `task/observability`) in TASKS.md so the tasklist workflow creates GitHub issues with the correct taxonomy.
 - When plans shift, update the idea + charter + milestone simultaneously, run `project.sync.*`, and note the change in the learning log with references to upstream/downstream slices.
+- Periodically run `.dev/automation/scripts/project-lifecycle-radar.sh` so planning docs inherit a JSON snapshot of lifecycle totals, overdue reviews, and slices missing GitHub/ERPNext identifiers.
 
 This playbook ensures every iteration stays orchestrated, even when collaborators operate offline or in segmented environments.
