@@ -1,15 +1,16 @@
 ---
 id: job-hq-link-auditor
-title: HQ ↔ Generator Link Auditor
+title: "HQ \u2194 Generator Link Auditor"
 lifecycle_stage: deliver
 status: queued
 owner: frontiers-core
 sponsors:
   - platform-ops
 source: internal
-review_date: "2025-12-31"
+review_date: 31-12-2025
 erpnext_project: PM-BASELINE
-github_project: https://github.com/users/IAmJonoBo/projects/5
+erpnext_task: TASK-2025-00005
+github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
   - delivery/job
   - governance/project-management

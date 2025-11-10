@@ -24,7 +24,7 @@ Run this playbook whenever any of the following is true:
 
 ```bash
 # set once per session
-export GH_OWNER="IAmJonoBo"
+export GH_OWNER="n00tropic"
 export BOARD_TITLE="<board name>"                # e.g., "Frontier Ops Control Plane"
 export TEMPLATE_ID="<template_id>"               # integer
 export GRAFANA_DASHBOARD_JSON="<path/to/dashboard.json>"
@@ -142,7 +142,7 @@ Keep a succinct **Upstream/Downstream Impact Summary** per change in the learnin
 ## 7) Quick-run Summary (copy/paste, fill placeholders)
 
 ```bash
-export GH_OWNER="IAmJonoBo"
+export GH_OWNER="n00tropic"
 export BOARD_TITLE="<board name>"
 export TEMPLATE_ID="<template_id>"
 export GRAFANA_DASHBOARD_JSON="<path/to/dashboard.json>"

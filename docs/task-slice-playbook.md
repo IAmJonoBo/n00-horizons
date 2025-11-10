@@ -21,7 +21,7 @@ All tasks must map to one or more slices; use `links[]` to point to their parent
 
 ## 2. Metadata & Automation Rules
 
-1. **Front matter** – every Markdown artifact gets the shared YAML header (`id`, `title`, `lifecycle_stage`, `status`, `tags`, `review_date`, upstream `links[]`). Use `project.recordIdea` or `project.ingestMarkdown` to scaffold.
+1. **Front matter** – every Markdown artifact gets the shared YAML header (`id`, `title`, `lifecycle_stage`, `status`, `tags`, `review_date`, upstream `links[]`) plus the integration fields: `erpnext_project`, `erpnext_task` (when a task exists), and `github_project`. The GitHub URL is always `https://github.com/orgs/n00tropic/projects/1`, and ERPNext codes come from the helpers in `n00tropic/.dev/automation/scripts/helpers/erpnext-env.sh` (sourced by `run-erpnext-jobs.sh`, `erpnext-export.sh`, `erpnext-verify-checksums.sh`, and `erpnext-sync-pm.py`). Use `project.recordIdea` or `project.ingestMarkdown` to scaffold.
 2. **Auto-normalisation** – `project.capture` canonicalises tags and records registry drift. Airgapped systems should set `PROJECT_METADATA_OFFLINE=1` (if needed) to skip remote checks but still run validators locally.
 3. **Impact Analysis** – after editing an artefact, run:
    ```bash
@@ -33,6 +33,7 @@ All tasks must map to one or more slices; use `links[]` to point to their parent
 4. **Readiness Gate** – before setting a slice to `deliver`/`in-progress`, execute `.dev/automation/scripts/project-preflight.sh --path <doc>` (or call `project.preflight`) to chain the capture + sync runs and ensure `links[]`, `review_date`, and integration IDs are all populated.
    - Use `.dev/automation/scripts/project-preflight-batch.sh --include-registry` during planning or audits to fan out the same gate across every catalogued artefact so GitHub/ERPNext drift is surfaced in one report.
 5. **Task exports** – to copy a slice elsewhere, run `project-ingest-markdown.sh --path <doc> --kind project --owner <team>` in the destination repo. Metadata is preserved and re-registered.
+6. **Language & measurement standards** – capture durations, distances, and weights in metric units, write in Oxford English, and render every human-readable date (`review_date`, `recorded`, timeline bullets) as `DD-MM-YYYY` so automation artefacts remain locale-aligned.
 
 ---
 
@@ -52,7 +53,7 @@ When slicing a task, capture:
 ### Impact Summary
 
 - Upstream: idea-frontier-ops-control-plane (doc path)
-- Downstream: PM-FOPS-CTRL ERPNext project, GitHub Project 5 column "In Progress"
+- Downstream: PM-FOPS-CTRL ERPNext project, n00tropic board (Project 1) column "In Progress"
 - Metadata updated: yes/no (run `project.capture`)
 - Automations run: github-project-apply-blueprint.sh, erpnext-import-blueprint.sh
 - Evidence: `.dev/automation/artifacts/project-sync/<id>-sync_github.json`

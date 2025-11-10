@@ -10,9 +10,9 @@ tags:
   - integration/erpnext
   - dx/frontier-standards
   - knowledge/learning-log
-review_date: "2026-03-31"
+review_date: 31-03-2026
 erpnext_project: PM-FOPS-CTRL
-github_project: https://github.com/users/IAmJonoBo/projects/6
+github_project: https://github.com/orgs/n00tropic/projects/1
 links:
   - type: idea
     path: ../ideas/idea-frontier-ops-control-plane/README.md
@@ -20,7 +20,7 @@ links:
     path: ../../../n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 related_projects:
   - project-frontier-ops-control-plane
-recorded: "2025-11-06"
+recorded: 06-11-2025
 ---
 
 # Learning Log – Frontier Ops Control Plane Enablement

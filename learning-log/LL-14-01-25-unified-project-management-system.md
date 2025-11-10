@@ -9,18 +9,18 @@ tags:
   - automation/n00t
   - integration/erpnext
   - knowledge/learning-log
-review_date: "2025-02-14"
-erpnext_project: null
-github_project: null
+review_date: 14-02-2025
+erpnext_project: PM-UNIFIED
+github_project: https://github.com/orgs/n00tropic/projects/1
 links:
   - type: project
     path: ../../../n00tropic_HQ/98. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
 related_projects:
   - project-ip-002
-recorded: "2025-01-14"
+recorded: 14-01-2025
 ---
 
-# Learning Log – 2025-01-14 – Unified Project Management System Spike
+# Learning Log – 14-01-2025 – Unified Project Management System Spike
 
 ## Observations
 

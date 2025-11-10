@@ -7,9 +7,10 @@ owner: platform-ops
 sponsors:
   - product-office
 source: internal
-review_date: "2025-12-31"
+review_date: 31-12-2025
 erpnext_project: PM-UNIFIED
-github_project: https://github.com/users/IAmJonoBo/projects/5
+erpnext_task: TASK-2025-00002
+github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
   - delivery/job
   - automation/n00t

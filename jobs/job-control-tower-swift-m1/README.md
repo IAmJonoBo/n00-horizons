@@ -7,9 +7,10 @@ owner: frontiers-core
 sponsors:
   - product-office
 source: agent-workflow
-review_date: "2025-12-09"
+review_date: 09-12-2025
 erpnext_project: PM-FOPS-CTRL
-github_project: https://github.com/users/IAmJonoBo/projects/6
+erpnext_task: TASK-2025-00007
+github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
   - automation/n00t
   - delivery/job

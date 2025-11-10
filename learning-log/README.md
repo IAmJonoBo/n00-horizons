@@ -7,35 +7,33 @@ This directory contains structured templates for recording agent learning experi
 Use the following format for learning log files:
 
 ```text
-LL-DD-MM-YY-description.md
+LL-DD-MM-YYYY-description.md
 ```
 
 Examples:
 
-- `LL-13-12-25-trunk-isort-black-conflict.md`
-- `LL-15-01-26-api-rate-limit-handling.md`
-- `LL-22-02-26-dependency-version-conflict.md`
+- `LL-13-12-2025-trunk-isort-black-conflict.md`
+- `LL-15-01-2026-api-rate-limit-handling.md`
+- `LL-22-02-2026-dependency-version-conflict.md`
 
 ## Template Usage
 
 Copy `learning-log-template.md` to create a new learning log file with the appropriate naming convention.
 
-### Frontmatter Fields
+### Front matter fields
 
-- `summary`: Brief description of the learning experience
-- `version`: Template version (usually "1.0.0")
-- `created_date`: Date in YYYY-MM-DD format
-- `created_tz`: Timezone (e.g., "UTC")
-- `last_updated`: Date of last modification
-- `agent_id`: Identifier of the agent or "human" for manual entries
-- `context`: Development context (development, debugging, automation, etc.)
-- `problem_type`: Type of problem encountered
-- `severity`: Impact level (low, medium, high, critical)
-- `tags`: Array of searchable tags
-- `related_files`: Files involved in the issue
-- `related_issues`: GitHub issue URLs/IDs
-- `related_prs`: Pull request URLs/IDs
-- `training_potential`: Value for AI training (high, medium, low, none)
+Every log starts with the shared YAML header; stick to Oxford English and metric measurements in the narrative body.
+
+- `id`: Stable identifier (`learn-YYYY-MM-DD-topic` to preserve sort order).
+- `title`: Human-friendly summary.
+- `lifecycle_stage`, `status`, `owner`, `tags`: Match the task taxonomy; tags must exist in `n00-cortex/data/catalog/project-tags.yaml`.
+- `review_date`: Next checkpoint in `DD-MM-YYYY`.
+- `erpnext_project`: ERPNext project code (`PM-*`), sourced from `.dev/automation/scripts/helpers/erpnext-env.sh`.
+- `github_project`: Always `https://github.com/orgs/n00tropic/projects/1` (the `n00tropic` board).
+- `links`: Upstream artefacts (ideas, projects, jobs, charters, etc.).
+- `related_projects`: ERPNext/GitHub identifiers tied to the learning.
+- `recorded`: When the log was captured (`DD-MM-YYYY`).
+- `agent_id`, `context`, `problem_type`, `severity`, `training_potential`: Metadata for classification and retraining.
 
 ### Sections
 

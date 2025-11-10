@@ -8,21 +8,27 @@ tags:
   - learning-log
   - knowledge/learning-log
   - "[additional relevant tags]"
-review_date: "YYYY-MM-DD"
-erpnext_project: null
-github_project: null
+review_date: DD-MM-YYYY
+erpnext_project: PM-TEMPLATE
+github_project: https://github.com/orgs/n00tropic/projects/1
 links:
   - type: project
     path: ../ideas/example/README.md
 related_projects:
   - project-foo-bar
-recorded: "YYYY-MM-DD"
+recorded: DD-MM-YYYY
 agent_id: "[agent identifier or 'human']"
 context: "[development, debugging, automation, etc.]"
 problem_type: "[complex-problem, recurring-issue, performance, error-handling, etc.]"
 severity: "[low, medium, high, critical]"
 training_potential: "[high, medium, low, none]"
 ---
+
+> **Metadata guardrails**
+>
+> - Dates (`review_date`, `recorded`, timeline headings) use `DD-MM-YYYY`.
+> - `erpnext_project` values come from the automation helpers in `n00tropic/.dev/automation/scripts/helpers/erpnext-env.sh`, which are sourced by `run-erpnext-jobs.sh`, `erpnext-export.sh`, `erpnext-verify-checksums.sh`, and `erpnext-sync-pm.py`.
+> - Keep descriptions in Oxford English and default to metric measurements/time references.
 
 # Learning Log — [Descriptive Title]
 
@@ -77,10 +83,10 @@ training_potential: "[high, medium, low, none]"
 
 ## 3. Solutions Attempted
 
-| Attempt # | Approach | Outcome | Time Spent | Lessons Learned |
-| --------- | -------- | ------- | ---------- | --------------- |
-| 1 | [solution description] | [success/failure/partial] | [duration] | [key insights] |
-| 2 | [solution description] | [success/failure/partial] | [duration] | [key insights] |
+| Attempt # | Approach               | Outcome                   | Time Spent | Lessons Learned |
+| --------- | ---------------------- | ------------------------- | ---------- | --------------- |
+| 1         | [solution description] | [success/failure/partial] | [duration] | [key insights]  |
+| 2         | [solution description] | [success/failure/partial] | [duration] | [key insights]  |
 
 ### Final Resolution
 

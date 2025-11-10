@@ -42,7 +42,7 @@ Every job must document and satisfy the following gates before closure:
 - **Metadata schema** – `n00-cortex/schemas/project-metadata.schema.json` guards every job document.
 - **n00t capabilities** – `project.recordJob`, `project.capture`, `project.sync.github`, `project.sync.erpnext` orchestrate registration and sync.
 - **ERPNext** – Jobs link to ERPNext Projects/Tasks using `erpnext_project` codes (required before `status = in-progress`).
-- **GitHub Projects** – Jobs reference the automation-backed board via `github_project` URLs.
+- **GitHub Projects** – Jobs reference the automation-backed `https://github.com/orgs/n00tropic/projects/1` board via `github_project` URLs (permissions per [GitHub Projects guidance](https://docs.github.com/en/issues/planning-and-tracking-with-projects)).
 
 ## 5. Operating Rhythm
 

@@ -1,15 +1,16 @@
 ---
 id: job-schema-template-parity
-title: Schema ↔ Template Parity Auditor
+title: "Schema \u2194 Template Parity Auditor"
 lifecycle_stage: deliver
 status: queued
 owner: frontiers-core
 sponsors:
   - platform-ops
 source: internal
-review_date: "2025-12-31"
+review_date: 31-12-2025
 erpnext_project: PM-BASELINE
-github_project: https://github.com/users/IAmJonoBo/projects/5
+erpnext_task: TASK-2025-00009
+github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
   - delivery/job
   - dx/frontier-standards

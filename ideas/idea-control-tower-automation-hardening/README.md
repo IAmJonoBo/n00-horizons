@@ -11,11 +11,11 @@ tags:
   - automation/n00t
   - governance/project-management
   - knowledge/idea
-review_date: "2025-12-09"
+review_date: 09-12-2025
 erpnext_project: PM-FOPS-CTRL
-github_project: https://github.com/users/IAmJonoBo/projects/6
+github_project: https://github.com/orgs/n00tropic/projects/1
 links: []
-created: "2025-11-09"
+created: 09-11-2025
 ---
 
 # Idea: Control Tower Automation Hardening

@@ -16,13 +16,13 @@ tags:
   - automation/n00t
   - ingestion/pipeline
   - docs/markdown
-review_date: "2025-12-15"
+review_date: 15-12-2025
 erpnext_project: PM-DOC2MD-GEN
-github_project: https://github.com/users/IAmJonoBo/projects/6
+github_project: https://github.com/orgs/n00tropic/projects/1
 links:
   - type: planning-brief
     path: ../../experiments/exp-document-to-markdown-generator/brief.md
-created: "2025-02-15"
+created: 15-02-2025
 ---
 
 # Idea: Document to Markdown Generator

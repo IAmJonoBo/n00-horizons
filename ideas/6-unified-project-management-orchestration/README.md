@@ -12,9 +12,9 @@ tags:
   - automation/n00t
   - integration/erpnext
   - knowledge/idea
-review_date: "2026-03-31"
+review_date: 31-03-2026
 erpnext_project: PM-UNIFIED
-github_project: https://github.com/users/IAmJonoBo/projects/5
+github_project: https://github.com/orgs/n00tropic/projects/1
 links:
   - type: charter
     path: ../../../../n00tropic_HQ/98. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md

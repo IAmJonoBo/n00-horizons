@@ -25,9 +25,9 @@ Generated: 2025-11-09T18:27:49Z | Documents scanned: 6
 
 ## Preflight Watchlist
 
-| ID              | Status    | Issues                                                                                                                                                                                                                                  | Artefact                                                            |
-| --------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `job-your-slug` | attention | links[] is empty; cite upstream/downstream slices for traceability.<br>github_project missing for delivery-stage work; set the Project board URL.<br>erpnext_project missing for delivery-stage work; provide the ERPNext Project code. | .dev/automation/artifacts/project-sync/job-your-slug-preflight.json |
+| ID              | Status    | Issues                                                                                                                                                                                                                                                                                                                                         | Artefact                                                            |
+| --------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `job-your-slug` | attention | links[] is empty; cite upstream/downstream slices for traceability.<br>github_project missing for delivery-stage work; set it to `https://github.com/orgs/n00tropic/projects/1` (n00tropic board).<br>erpnext_project missing for delivery-stage work; provide the ERPNext Project code from `.dev/automation/scripts/helpers/erpnext-env.sh`. | .dev/automation/artifacts/project-sync/job-your-slug-preflight.json |
 
 ## Outstanding Jobs
 

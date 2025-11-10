@@ -1,15 +1,16 @@
 ---
 id: job-control-tower-audits
-title: Control Tower – Registry & Lifecycle Audits
+title: "Control Tower \u2013 Registry & Lifecycle Audits"
 lifecycle_stage: deliver
 status: queued
 owner: platform-ops
 sponsors:
   - product-office
 source: internal
-review_date: "2025-12-31"
+review_date: 31-12-2025
 erpnext_project: PM-FOPS-CTRL
-github_project: https://github.com/users/IAmJonoBo/projects/6
+erpnext_task: TASK-2025-00010
+github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
   - delivery/job
   - governance/project-management
