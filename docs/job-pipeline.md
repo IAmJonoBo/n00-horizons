@@ -65,3 +65,9 @@ Follow this playbook for every job so humans and agents always know where work o
 
 - Run `.dev/automation/scripts/project-lifecycle-radar.sh` (or invoke `project.lifecycleRadar`) ahead of a planning session to export a JSON radar showing lifecycle totals, overdue review dates, slices missing links, and delivery artefacts without GitHub/ERPNext identifiers.
 - Drop the emitted artefact path into task-slice worksheets or learning logs so future operators inherit the same situational awareness.
+
+## 8. Autoresolution & Edge Cases
+
+- Follow the [Autoresolution & Guardrail Playbook](autoresolution-playbook.md) whenever radar/preflight calls out drift. It chains detection, autofix, and logging so agents can resolve common issues without touching raw files manually.
+- Run `.dev/automation/scripts/autofix-project-metadata.py --apply` before editing a job to keep tag aliases, date formats (DD-MM-YYYY), and integration URLs aligned.
+- Once the `project.autofixLinks` capability ships (see `jobs/job-project-autofix-links/README.md`), include it in the readiness loop to repair broken relative links and stale upstream references automatically.

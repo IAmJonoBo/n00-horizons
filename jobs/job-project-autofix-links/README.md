@@ -2,7 +2,7 @@
 id: job-project-autofix-links
 title: project.autofixLinks Capability
 lifecycle_stage: deliver
-status: queued
+status: in-progress
 owner: platform-ops
 sponsors:
   - product-office
@@ -61,6 +61,15 @@ n00-horizons/jobs/job-project-autofix-links/README.md` returns `status=ok`
 - GitHub/ERPNext fields to be populated once downstream boards exist; capture
   IDs here before starting delivery work.
 
+## Delivery Plan (Accelerated)
+
+1. **Capability shell + Python entrypoint** – add `.dev/automation/scripts/project-autofix-links.sh` + `project_autofix_links.py` mirroring the structure of `project-control-panel.*`. Wire in `lib/project_metadata` so relative-path discovery works for ideas, jobs, HQ docs, and Renovate manifests.
+2. **Metadata rewrite engine** – leverage the registry + repo map from `project_metadata.py` to detect stale links, update them in place, and emit a diff block saved under `.dev/automation/artifacts/project-autofix-links/<doc>.json`. Include dry-run + `--apply` modes so agents can stage fixes locally.
+3. **Capability manifest + docs** – register `project.autofixLinks` in `n00t/capabilities/manifest.json` (CLI + MCP) and extend `PROJECT_ORCHESTRATION.md`, `docs/autoresolution-playbook.md`, and Control Tower runbooks with invocation guidance/examples.
+4. **Telemetry & tests** – add fixtures under `n00-horizons/tests/` plus CLI smoke tests (ideas + jobs + HQ charters). Update `meta-check` to call the capability in dry-run mode to guard against regressions.
+5. **Roll-out** – run the capability across the registry + HQ docs, attach artefacts to this job’s `Notes & Updates`, and broadcast in the control panel so agents can rely on automated link remediation going forward.
+
 ## Notes & Updates
 
-- 2025-11-09: Job queued via automation. Pending integration IDs + QA plan.
+- 10-11-2025: Elevated to **in-progress** so the autoresolution loop has a working remediation capability. Acceleration plan focuses on building the CLI entrypoint, output artefacts, and MCP exposure before the next radar/control-panel refresh.
+- 09-11-2025: Job queued via automation. Pending integration IDs + QA plan.

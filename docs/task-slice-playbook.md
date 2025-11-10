@@ -34,6 +34,7 @@ All tasks must map to one or more slices; use `links[]` to point to their parent
    - Use `.dev/automation/scripts/project-preflight-batch.sh --include-registry` during planning or audits to fan out the same gate across every catalogued artefact so GitHub/ERPNext drift is surfaced in one report.
 5. **Task exports** – to copy a slice elsewhere, run `project-ingest-markdown.sh --path <doc> --kind project --owner <team>` in the destination repo. Metadata is preserved and re-registered.
 6. **Language & measurement standards** – capture durations, distances, and weights in metric units, write in Oxford English, and render every human-readable date (`review_date`, `recorded`, timeline bullets) as `DD-MM-YYYY` so automation artefacts remain locale-aligned.
+7. **Autoresolution loop** – when radar or preflight flags drift, follow `docs/autoresolution-playbook.md` and run `.dev/automation/scripts/autofix-project-metadata.py --apply` plus the upcoming `project.autofixLinks` capability before updating status. Always attach the resulting artefact paths (`project-sync/*.json`, `project-autofix-links/*.json`) to learning logs or handover notes.
 
 ---
 

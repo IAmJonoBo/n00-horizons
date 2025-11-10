@@ -2,7 +2,7 @@
 title: "<Experiment name>"
 summary: "Short description of the hypothesis and expected outcome."
 version: "0.1.0"
-last_verified: "2025-01-09"
+last_verified: 09-01-2025
 last_verified_tz: "UTC"
 diataxis: "how-to"
 tags:
@@ -11,6 +11,12 @@ tags:
 sources:
   - "docs/workflows/horizons-project-management.md"
 ---
+
+> **Guardrails**
+>
+> - Keep narrative language in Oxford English and list quantitative results in metric units.
+> - Dates (`last_verified`, timeline entries) use `DD-MM-YYYY`.
+> - Link downstream jobs/projects via the metadata template before running automation.
 
 # Experiment Brief — <Experiment name>
 
@@ -23,7 +29,7 @@ sources:
 
 | Hypothesis | Metrics | Target |
 | ---------- | ------- | ------ |
-| ... | ... | ... |
+| ...        | ...     | ...    |
 
 ## 3. Dataset & Tooling
 
@@ -43,7 +49,7 @@ Capture notable runs, evaluation results, and links to lab notes.
 
 | Date | Event | Observations |
 | ---- | ----- | ------------ |
-| ... | ... | ... |
+| ...  | ...   | ...          |
 
 ## 6. Risks & Safety
 

@@ -7,7 +7,9 @@ owner: project-office
 sponsors:
   - platform-ops
 source: automation-rollout
-review_date: "2025-06-01"
+review_date: 01-06-2025
+erpnext_project: PM-UNIFIED
+github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
   - governance/project-management
   - automation/n00t
@@ -40,6 +42,12 @@ Keep multiple project briefs, plans, and handover notes in sync by flagging conf
 - Every automation run appends a summary of material slices plus `flags` to whichever automation log you pass via `LEARNING_LOG_PATH`; reference this log inside your agent handover packet alongside `artifacts/slices.enriched.json` and `artifacts/project-slices.json`.
 - When a flag persists across >2 runs, raise a task in the owning GitHub Project column (`project.sync.github`) and tag with `governance/project-management` + `automation/n00t`.
 - After applying fixes, rerun `project.capture` plus `project.sync.github` and `project.sync.erpnext` for the updated doc so external systems receive the resolved state.
+
+## Autoresolution Hooks
+
+- **Metadata autofix** – run `.dev/automation/scripts/autofix-project-metadata.py --apply` before triage to normalise tag aliases, lifecycle enums, and date formats (DD-MM-YYYY). The script consumes the same helpers sourced from `n00tropic/.dev/automation/scripts/helpers/erpnext-env.sh`, so ERPNext codes remain canonical.
+- **Link remediation** – the `project.autofixLinks` job (see `jobs/job-project-autofix-links/README.md`) supplies the upcoming capability that rewrites broken `links[]` entries using the workspace repo map. Until the capability ships, lean on `project.recordJob --from <source>` to regenerate the metadata block and reduce manual edits.
+- **Agent readiness loop** – add `project.preflight --autofix` (when available) to your run to chain `project.capture`, `project.sync.*`, and the autofix scripts. Record artefact paths in the learning log so downstream agents can replay the edge-case resolution.
 
 ## Acceptance
 

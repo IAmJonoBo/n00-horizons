@@ -44,3 +44,9 @@ See `docs/` for detailed guidance, checklists, and linkage back to n00-frontiers
   - `project.capture` / `project.sync.*` – validate, register, and surface upstream/downstream impacts before coordination with GitHub or ERPNext.
 - Run `.dev/automation/scripts/validate-project-metadata.py` prior to merges; the check blocks drift (missing links, invalid tags, duplicate IDs). Jobs under `jobs/` are automatically included.
 - Canonical tags live in `n00-cortex/data/catalog/project-tags.yaml`. Submit changes via PRs and use `.dev/automation/scripts/autofix-project-metadata.py --apply` to canonicalise aliases locally.
+
+## Readiness & Autoresolution Loop
+
+- Reference the [Autoresolution & Guardrail Playbook](docs/autoresolution-playbook.md) for the end-to-end detection/remediation flow covering lifecycle radar, preflight, and conflict scans.
+- Before opening a PR, run `.dev/automation/scripts/autofix-project-metadata.py --apply` and `project.preflight --path <doc>` so date formats (DD-MM-YYYY), ERPNext codes, and the unified GitHub Project URL stay aligned. Capture artefacts in `.dev/automation/artifacts/project-sync/` for handovers.
+- Control Tower jobs (`job-project-autofix-links`, `job-lifecycle-radar-consolidation`, `job-control-tower-audits`) provide autoresolution features for n00t agents. Invoke their capabilities (once delivered) via `n00t run <capability>` or the helper scripts under `.dev/automation/scripts/` to fix link drift, refresh dashboards, and push status updates to GitHub + ERPNext automatically.
