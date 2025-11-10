@@ -5,24 +5,21 @@ lifecycle_stage: deliver
 status: queued
 owner: platform-ops
 sponsors:
-  - finance-ops
+- finance-ops
 source: internal
 review_date: 31-12-2025
 erpnext_project: PM-UNIFIED
 erpnext_task: TASK-2025-00003
 github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
-  - delivery/job
-  - integration/erpnext
-  - automation/ci-cd
-  - governance/project-management
+- delivery/job
+- integration/erpnext
+- automation/ci-cd
+- governance/project-management
 links:
-  - type: doc
-    path: ../../../../.dev/automation/scripts/erpnext-export.sh
-  - type: doc
-    path: ../../../../n00tropic_HQ/12-Platform-Ops/README.md
+- type: doc
+  path: n00tropic_HQ/12-Platform-Ops/README.md
 ---
-
 # Job: ERPNext Export Resilience Guardrails
 
 ## Objective

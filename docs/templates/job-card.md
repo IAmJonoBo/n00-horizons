@@ -23,7 +23,7 @@ links: []
 > - `erpnext_project` / `erpnext_task` values are sourced by the ERPNext helpers at `n00tropic/.dev/automation/scripts/helpers/erpnext-env.sh` (consumed by `run-erpnext-jobs.sh`, `erpnext-export.sh`, `erpnext-verify-checksums.sh`, and `erpnext-sync-pm.py`).
 > - All jobs reference the unified board: `https://github.com/orgs/n00tropic/projects/1`.
 
-# Job: Job Title
+# Job: Job Title _(See `n00-horizons/jobs/job-your-slug/README.md` for the living reference implementation.)_
 
 ## Objective
 

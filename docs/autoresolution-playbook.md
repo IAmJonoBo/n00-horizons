@@ -37,8 +37,8 @@ This playbook documents the autoremediation loop that keeps Horizons artefacts s
 ## 2. Autoresolution Steps
 
 1. **Autofix metadata** – run `.dev/automation/scripts/autofix-project-metadata.py --apply` before touching the files. The script normalises tag aliases (per `n00-cortex/data/catalog/project-tags.yaml`), coerces every human-readable date into `DD-MM-YYYY`, and ensures `github_project` defaults to `https://github.com/orgs/n00tropic/projects/1`. It sources ERPNext codes through `n00tropic/.dev/automation/scripts/helpers/erpnext-env.sh`, so agents do not have to chase env vars manually.
-2. **Repair links** – call the upcoming `project.autofixLinks` capability (tracked by `jobs/job-project-autofix-links/README.md`). Until the capability is merged, use `project.recordJob --from <source>` or `project.ingestMarkdown --path <doc>` to rehydrate the metadata block, then update `links[]` entries with the relative path helpers defined in `lib/project_metadata.py`.
-3. **Re-run preflight with autofix** – once the capability exposes `--autofix` (or a related flag), invoke `project.preflight --path <doc> --autofix` so control-plane automation can repair common errors (missing review dates, incorrect board URL) before surfacing TODOs.
+2. **Repair links** – call `.dev/automation/scripts/project-autofix-links.sh --path <doc>` (capability id `project.autofixLinks`, tracked by `jobs/job-project-autofix-links/README.md`). Use `--apply` to persist fixes after reviewing the generated artefact under `.dev/automation/artifacts/project-autofix-links/`.
+3. **Re-run preflight** – invoke `.dev/automation/scripts/project-preflight.sh --path <doc>` so control-plane automation can re-validate review cadence, integration IDs, and downstream syncs with the repaired links in place.
 4. **Log evidence** – append the artefact paths produced in steps 1–3 into the relevant learning log (`learning-log/LL-*.md`). This keeps downstream agents informed of the remediation context and prevents duplicate work.
 
 ## 3. Agent Workflow Snippets
@@ -47,11 +47,15 @@ This playbook documents the autoremediation loop that keeps Horizons artefacts s
 # 1) Autofix metadata + tags (idempotent)
 .dev/automation/scripts/autofix-project-metadata.py --apply --path n00-horizons/jobs/job-control-tower-audits/README.md
 
-# 2) Re-run capture + preflight with artefact export
+# 2) Repair links (dry-run, then apply)
+.dev/automation/scripts/project-autofix-links.sh --path n00-horizons/jobs/job-control-tower-audits/README.md
+.dev/automation/scripts/project-autofix-links.sh --path n00-horizons/jobs/job-control-tower-audits/README.md --apply
+
+# 3) Re-run capture + preflight with artefact export
 .dev/automation/scripts/project-capture.sh --path n00-horizons/jobs/job-control-tower-audits/README.md
 .dev/automation/scripts/project-preflight.sh --path n00-horizons/jobs/job-control-tower-audits/README.md --artefact-dir .dev/automation/artifacts/project-sync/
 
-# 3) Sync external systems and record evidence
+# 4) Sync external systems and record evidence
 .dev/automation/scripts/project-sync.github.sh --path n00-horizons/jobs/job-control-tower-audits/README.md
 .dev/automation/scripts/project-sync-erpnext.sh --path n00-horizons/jobs/job-control-tower-audits/README.md
 ```

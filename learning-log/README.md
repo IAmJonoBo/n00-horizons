@@ -24,7 +24,7 @@ Copy `learning-log-template.md` to create a new learning log file with the appro
 
 Every log starts with the shared YAML header; stick to Oxford English and metric measurements in the narrative body.
 
-- `id`: Stable identifier (`learn-YYYY-MM-DD-topic` to preserve sort order).
+- `id`: Stable identifier (`learn-DD-MM-YYYY-topic` for humans + automation).
 - `title`: Human-friendly summary.
 - `lifecycle_stage`, `status`, `owner`, `tags`: Match the task taxonomy; tags must exist in `n00-cortex/data/catalog/project-tags.yaml`.
 - `review_date`: Next checkpoint in `DD-MM-YYYY`.

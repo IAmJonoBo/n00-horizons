@@ -46,7 +46,7 @@ Keep multiple project briefs, plans, and handover notes in sync by flagging conf
 ## Autoresolution Hooks
 
 - **Metadata autofix** – run `.dev/automation/scripts/autofix-project-metadata.py --apply` before triage to normalise tag aliases, lifecycle enums, and date formats (DD-MM-YYYY). The script consumes the same helpers sourced from `n00tropic/.dev/automation/scripts/helpers/erpnext-env.sh`, so ERPNext codes remain canonical.
-- **Link remediation** – the `project.autofixLinks` job (see `jobs/job-project-autofix-links/README.md`) supplies the upcoming capability that rewrites broken `links[]` entries using the workspace repo map. Until the capability ships, lean on `project.recordJob --from <source>` to regenerate the metadata block and reduce manual edits.
+- **Link remediation** – run `.dev/automation/scripts/project-autofix-links.sh --path <doc> [--apply]` (capability `project.autofixLinks`, see `jobs/job-project-autofix-links/README.md`) to rewrite `links[]` with canonical paths, add reciprocal references, and emit a remediation artefact under `.dev/automation/artifacts/project-autofix-links/`.
 - **Agent readiness loop** – add `project.preflight --autofix` (when available) to your run to chain `project.capture`, `project.sync.*`, and the autofix scripts. Record artefact paths in the learning log so downstream agents can replay the edge-case resolution.
 
 ## Acceptance

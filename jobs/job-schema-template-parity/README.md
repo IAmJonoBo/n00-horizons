@@ -5,24 +5,23 @@ lifecycle_stage: deliver
 status: queued
 owner: frontiers-core
 sponsors:
-  - platform-ops
+- platform-ops
 source: internal
 review_date: 31-12-2025
 erpnext_project: PM-BASELINE
 erpnext_task: TASK-2025-00009
 github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
-  - delivery/job
-  - dx/frontier-standards
-  - automation/n00t
-  - automation/ci-cd
+- delivery/job
+- dx/frontier-standards
+- automation/n00t
+- automation/ci-cd
 links:
-  - type: doc
-    path: ../../../n00-frontiers/docs/overview
-  - type: doc
-    path: ../../../n00-cortex/data/toolchain-manifest.json
+- type: doc
+  path: n00tropic-cerebrum/n00-cortex/data/toolchain-manifest.json
+- type: doc
+  path: n00tropic-cerebrum/n00-frontiers/docs/overview
 ---
-
 # Job: Schema ↔ Template Parity Auditor
 
 ## Objective

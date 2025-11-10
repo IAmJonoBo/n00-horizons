@@ -1,5 +1,5 @@
 ---
-id: learn-YYYY-MM-DD-topic
+id: learn-DD-MM-YYYY-topic
 title: "[Descriptive Title]"
 lifecycle_stage: discover
 status: draft

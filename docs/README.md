@@ -7,7 +7,7 @@ This directory stores working documents that complement the guidance in the [n00
 - `templates/` — markdown scaffolds for new briefs and lab notes.
 - `upstream-downstream-ops-sync-playbook.md` — Agent-ready runbook for anticipating upstream/downstream impacts and syncing boards, observability, and metadata.
 - `project-conflict-resolution.md` — conflict triage playbook covering slice flags, learning-log usage, and remediation steps.
-- `autoresolution-playbook.md` — end-to-end loop for lifecycle radar, preflight, autofix scripts, and upcoming `project.autofixLinks` capability usage.
+- `autoresolution-playbook.md` — end-to-end loop for lifecycle radar, preflight, metadata autofix, and the `project.autofixLinks` capability.
 
 ## Experiment brief lifecycle
 

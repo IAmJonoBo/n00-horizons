@@ -6,7 +6,7 @@ TEMPLATES_DIR="$ROOT/docs/templates"
 DOCS_DIR="$ROOT/docs/experiments"
 EXPERIMENTS_DIR="$ROOT/experiments"
 
-DATE="${1:-$(date +%Y-%m-%d)}"
+DATE="${1:-$(date +%d-%m-%Y)}"
 SLUG="${2:-}"
 
 if [[ -z "$SLUG" ]]; then
@@ -30,7 +30,7 @@ if [[ ! -f "$DOC_FILE" ]]; then
 title: "<Experiment name>"
 summary: "Fill in summary."
 version: "0.1.0"
-last_verified: "$(date +%Y-%m-%d)"
+last_verified: DD-MM-YYYY
 last_verified_tz: "UTC"
 diataxis: "how-to"
 tags:
@@ -47,7 +47,7 @@ else
 fi
 
 if [[ ! -f "$LAB_NOTES" ]]; then
-  cat > "$LAB_NOTES" <<MD
+cat > "$LAB_NOTES" <<MD
 # Lab Notes — $EXPERIMENT_ID
 
 - **Brief**: docs/experiments/${SLUG}.md

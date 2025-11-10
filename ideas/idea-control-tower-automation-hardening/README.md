@@ -11,13 +11,26 @@ tags:
   - automation/n00t
   - governance/project-management
   - knowledge/idea
-review_date: 09-12-2025
+review_date: 31-03-2026
 erpnext_project: PM-FOPS-CTRL
 github_project: https://github.com/orgs/n00tropic/projects/1
-links: []
+links:
+  - type: job
+    path: n00tropic-cerebrum/n00-horizons/jobs/job-capability-playbooks/README.md
+  - type: job
+    path: n00tropic-cerebrum/n00-horizons/jobs/job-control-tower-audits/README.md
+  - type: job
+    path: n00tropic-cerebrum/n00-horizons/jobs/job-control-tower-swift-m1/README.md
+  - type: job
+    path: n00tropic-cerebrum/n00-horizons/jobs/job-lifecycle-radar-consolidation/README.md
+  - type: job
+    path: n00tropic-cerebrum/n00-horizons/jobs/job-project-autofix-links/README.md
+  - type: learning-log
+    path: n00tropic-cerebrum/n00-horizons/learning-log/LL-14-01-25-frontier-ops-control-plane-enablement.md
+  - type: project
+    path: n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 created: 09-11-2025
 ---
-
 # Idea: Control Tower Automation Hardening
 
 ## Problem Statement

@@ -5,26 +5,25 @@ lifecycle_stage: discover
 status: proposed
 owner: frontier-intelligence
 sponsors:
-  - platform-ops
-  - delivery
+- platform-ops
+- delivery
 affiliated_initiatives:
-  - n00clear-fusion
+- n00clear-fusion
 actions_required: true
 source: fusion-ingestion-roadmap
 tags:
-  - knowledge/idea
-  - automation/n00t
-  - ingestion/pipeline
-  - docs/markdown
+- knowledge/idea
+- automation/n00t
+- automation/ingestion
+- knowledge/documentation
 review_date: 15-12-2025
 erpnext_project: PM-DOC2MD-GEN
 github_project: https://github.com/orgs/n00tropic/projects/1
 links:
-  - type: planning-brief
-    path: ../../experiments/exp-document-to-markdown-generator/brief.md
+- type: planning-brief
+  path: n00tropic-cerebrum/n00-horizons/experiments/exp-document-to-markdown-generator/brief.md
 created: 15-02-2025
 ---
-
 # Idea: Document to Markdown Generator
 
 ## Problem Statement

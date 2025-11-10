@@ -5,21 +5,20 @@ lifecycle_stage: deliver
 status: queued
 owner: platform-ops
 sponsors:
-  - product-office
+- product-office
 source: agent-workflow
 review_date: 09-12-2025
 erpnext_project: PM-FOPS-CTRL
 erpnext_task: TASK-2025-00006
 github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
-  - automation/n00t
-  - delivery/job
-  - governance/project-management
+- automation/n00t
+- delivery/job
+- governance/project-management
 links:
-  - type: idea
-    path: ../../ideas/idea-control-tower-automation-hardening/README.md
+- type: idea
+  path: n00tropic-cerebrum/n00-horizons/ideas/idea-control-tower-automation-hardening/README.md
 ---
-
 # Job: Capability Playbook Upgrades
 
 ## Objective
@@ -48,4 +47,4 @@ links:
 
 ## Notes & Updates
 
-- 2025-11-09: Job created; awaiting assignment + integration mapping.
+- 09-11-2025: Job created; awaiting assignment + integration mapping.

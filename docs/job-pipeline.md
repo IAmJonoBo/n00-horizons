@@ -70,4 +70,4 @@ Follow this playbook for every job so humans and agents always know where work o
 
 - Follow the [Autoresolution & Guardrail Playbook](autoresolution-playbook.md) whenever radar/preflight calls out drift. It chains detection, autofix, and logging so agents can resolve common issues without touching raw files manually.
 - Run `.dev/automation/scripts/autofix-project-metadata.py --apply` before editing a job to keep tag aliases, date formats (DD-MM-YYYY), and integration URLs aligned.
-- Once the `project.autofixLinks` capability ships (see `jobs/job-project-autofix-links/README.md`), include it in the readiness loop to repair broken relative links and stale upstream references automatically.
+- Include `.dev/automation/scripts/project-autofix-links.sh --path <doc>` (capability `project.autofixLinks`) in the readiness loop to repair broken relative links and stale upstream references before capture/sync.

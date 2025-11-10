@@ -1,25 +1,24 @@
 ---
-id: learn-2025-01-14-upms
+id: learn-14-01-2025-upms
 title: Unified Project Management System Spike
 lifecycle_stage: discover
 status: recorded
 owner: codex-assist
 tags:
-  - governance/project-management
-  - automation/n00t
-  - integration/erpnext
-  - knowledge/learning-log
-review_date: 14-02-2025
+- governance/project-management
+- automation/n00t
+- integration/erpnext
+- knowledge/learning-log
+review_date: 31-03-2026
 erpnext_project: PM-UNIFIED
 github_project: https://github.com/orgs/n00tropic/projects/1
 links:
-  - type: project
-    path: ../../../n00tropic_HQ/98. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
+- type: project
+  path: n00tropic_HQ/98. Internal-Projects/IP-2-unified-project-management-system/IP-2-unified-project-management-system.md
 related_projects:
-  - project-ip-002
+- project-ip-002
 recorded: 14-01-2025
 ---
-
 # Learning Log – 14-01-2025 – Unified Project Management System Spike
 
 ## Observations
