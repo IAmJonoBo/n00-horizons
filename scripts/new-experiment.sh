@@ -7,11 +7,11 @@ DOCS_DIR="$ROOT/docs/experiments"
 EXPERIMENTS_DIR="$ROOT/experiments"
 
 DATE="${1:-$(date +%d-%m-%Y)}"
-SLUG="${2:-}"
+SLUG="${2-}"
 
-if [[ -z "$SLUG" ]]; then
-  echo "Usage: $(basename "$0") <date> <slug>" >&2
-  exit 2
+if [[ -z $SLUG ]]; then
+	echo "Usage: $(basename "$0") <date> <slug>" >&2
+	exit 2
 fi
 
 EXPERIMENT_ID="${DATE}-${SLUG}"
@@ -21,11 +21,11 @@ LAB_NOTES="$EXP_DIR/lab-notes.md"
 
 mkdir -p "$EXP_DIR" "$DOCS_DIR"
 
-if [[ ! -f "$DOC_FILE" ]]; then
-  if [[ -f "$TEMPLATES_DIR/experiment-brief.md" ]]; then
-    cp "$TEMPLATES_DIR/experiment-brief.md" "$DOC_FILE"
-  else
-    cat > "$DOC_FILE" <<'MD'
+if [[ ! -f $DOC_FILE ]]; then
+	if [[ -f "$TEMPLATES_DIR/experiment-brief.md" ]]; then
+		cp "$TEMPLATES_DIR/experiment-brief.md" "$DOC_FILE"
+	else
+		cat >"$DOC_FILE" <<'MD'
 ---
 title: "<Experiment name>"
 summary: "Fill in summary."
@@ -40,14 +40,14 @@ tags:
 
 ## Replace template
 MD
-  fi
-  echo "[new-experiment] Created experiment brief $DOC_FILE"
+	fi
+	echo "[new-experiment] Created experiment brief $DOC_FILE"
 else
-  echo "[new-experiment] Experiment brief already exists: $DOC_FILE"
+	echo "[new-experiment] Experiment brief already exists: $DOC_FILE"
 fi
 
-if [[ ! -f "$LAB_NOTES" ]]; then
-cat > "$LAB_NOTES" <<MD
+if [[ ! -f $LAB_NOTES ]]; then
+	cat >"$LAB_NOTES" <<MD
 # Lab Notes — $EXPERIMENT_ID
 
 - **Brief**: docs/experiments/${SLUG}.md
@@ -65,9 +65,9 @@ cat > "$LAB_NOTES" <<MD
 
 - [ ] Task / Owner
 MD
-  echo "[new-experiment] Lab notes scaffolded at $LAB_NOTES"
+	echo "[new-experiment] Lab notes scaffolded at $LAB_NOTES"
 else
-  echo "[new-experiment] Lab notes already exist: $LAB_NOTES"
+	echo "[new-experiment] Lab notes already exist: $LAB_NOTES"
 fi
 
 printf '\nNext steps:\n'

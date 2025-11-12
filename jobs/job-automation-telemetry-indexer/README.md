@@ -5,22 +5,23 @@ lifecycle_stage: deliver
 status: queued
 owner: platform-ops
 sponsors:
-- product-office
+  - product-office
 source: internal
 review_date: 31-12-2025
 erpnext_project: PM-FOPS-CTRL
 erpnext_task: TASK-2025-00004
 github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
-- delivery/job
-- automation/n00t
-- dx/developer-experience
+  - delivery/job
+  - automation/n00t
+  - dx/developer-experience
 links:
-- type: doc
-  path: .dev/automation/scripts/record-capability-run.py
-- type: doc
-  path: n00tropic_HQ/12-Platform-Ops/telemetry
+  - type: doc
+    path: .dev/automation/scripts/record-capability-run.py
+  - type: doc
+    path: n00tropic_HQ/12-Platform-Ops/telemetry
 ---
+
 # Job: Automation Telemetry Indexer & SLO Dashboard
 
 ## Objective

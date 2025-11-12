@@ -31,6 +31,7 @@ links:
     path: n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 created: 09-11-2025
 ---
+
 # Idea: Control Tower Automation Hardening
 
 ## Problem Statement

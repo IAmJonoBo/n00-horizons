@@ -96,14 +96,14 @@ Keep the repo coherent after changes:
 
 ```bash
 # validate schemas and data against JSON Schemas
-npm run validate:schemas
+pnpm run validate:schemas
 
 # (optional) regenerate docs manifest if structure changed, then validate
 python scripts/generate_docs_manifest.py
-npm run validate:docs-manifest
+pnpm run validate:docs-manifest
 
 # ensure docs build remains green
-npm run docs:build
+pnpm run docs:build
 ```
 
 ---
@@ -134,7 +134,7 @@ Keep a succinct **Upstream/Downstream Impact Summary** per change in the learnin
 - Board exists **and** tasks are visible in the correct lanes/filters.
 - Grafana dashboard and alerts active; learning log updated and captured.
 - `artifacts/project-slices.json` regenerated; agents can see updated topology.
-- `npm run validate:schemas` and `npm run docs:build` pass.
+- `pnpm run validate:schemas` and `pnpm run docs:build` pass.
 - Impact Worksheet + Summary present with evidence links; `project.sync.*` has run.
 
 ---
@@ -166,10 +166,10 @@ project.capture "$LEARNING_LOG"
 python scripts/project-slice-report.py --json artifacts/project-slices.json
 
 # 4) validate/build
-npm run validate:schemas
+pnpm run validate:schemas
 python scripts/generate_docs_manifest.py
-npm run validate:docs-manifest
-npm run docs:build
+pnpm run validate:docs-manifest
+pnpm run docs:build
 
 # 5) final sync
 project.sync.github

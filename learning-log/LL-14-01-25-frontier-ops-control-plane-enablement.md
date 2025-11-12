@@ -5,23 +5,24 @@ lifecycle_stage: discover
 status: recorded
 owner: platform-ops
 tags:
-- governance/project-management
-- automation/n00t
-- integration/erpnext
-- dx/frontier-standards
-- knowledge/learning-log
+  - governance/project-management
+  - automation/n00t
+  - integration/erpnext
+  - dx/frontier-standards
+  - knowledge/learning-log
 review_date: 31-03-2026
 erpnext_project: PM-FOPS-CTRL
 github_project: https://github.com/orgs/n00tropic/projects/1
 links:
-- type: idea
-  path: n00tropic-cerebrum/n00-horizons/ideas/idea-frontier-ops-control-plane/README.md
-- type: project
-  path: n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
+  - type: idea
+    path: n00tropic-cerebrum/n00-horizons/ideas/idea-frontier-ops-control-plane/README.md
+  - type: project
+    path: n00tropic_HQ/98. Internal-Projects/IP-3-frontier-ops-control-plane/IP-3-frontier-ops-control-plane.md
 related_projects:
-- project-frontier-ops-control-plane
+  - project-frontier-ops-control-plane
 recorded: 06-11-2025
 ---
+
 # Learning Log – Frontier Ops Control Plane Enablement
 
 ## Observations

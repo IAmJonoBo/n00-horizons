@@ -18,7 +18,9 @@ def run_master(args: list[str]) -> None:
         raise SystemExit(
             f"Master CLI not found at {MASTER_CLI}. Run this command from the workspace root."
         )
-    subprocess.run([sys.executable, str(MASTER_CLI), *args], check=True, cwd=WORKSPACE_ROOT)
+    subprocess.run(
+        [sys.executable, str(MASTER_CLI), *args], check=True, cwd=WORKSPACE_ROOT
+    )
 
 
 def git_status() -> None:
@@ -29,15 +31,23 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="n00-horizons helper CLI")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    preflight = subparsers.add_parser("preflight", help="Run preflight for a specific document.")
-    preflight.add_argument("--path", required=True, help="Metadata document to preflight.")
+    preflight = subparsers.add_parser(
+        "preflight", help="Run preflight for a specific document."
+    )
+    preflight.add_argument(
+        "--path", required=True, help="Metadata document to preflight."
+    )
 
-    auto = subparsers.add_parser("autoresolve", help="Run metadata + link autofix loop.")
+    auto = subparsers.add_parser(
+        "autoresolve", help="Run metadata + link autofix loop."
+    )
     auto.add_argument("--path", required=True, help="Metadata document to repair.")
     auto.add_argument("--apply", action="store_true", help="Persist link fixes.")
 
     subparsers.add_parser("radar", help="Regenerate lifecycle radar.")
-    subparsers.add_parser("control-panel", help="Regenerate the control panel Markdown.")
+    subparsers.add_parser(
+        "control-panel", help="Regenerate the control panel Markdown."
+    )
     subparsers.add_parser("status", help="Show git status for n00-horizons.")
 
     args = parser.parse_args()

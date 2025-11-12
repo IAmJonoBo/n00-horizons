@@ -5,24 +5,25 @@ lifecycle_stage: deliver
 status: queued
 owner: platform-ops
 sponsors:
-- product-office
+  - product-office
 source: internal
 review_date: 31-12-2025
 erpnext_project: PM-FOPS-CTRL
 erpnext_task: TASK-2025-00010
 github_project: https://github.com/orgs/n00tropic/projects/1
 tags:
-- delivery/job
-- governance/project-management
-- automation/n00t
-- integration/github
-- integration/erpnext
+  - delivery/job
+  - governance/project-management
+  - automation/n00t
+  - integration/github
+  - integration/erpnext
 links:
-- type: adr
-  path: n00tropic-cerebrum/1. Cerebrum Docs/ADR/ADR-004-unified-project-management-system.md
-- type: doc
-  path: n00tropic-cerebrum/n00-horizons/docs/job-pipeline.md
+  - type: adr
+    path: n00tropic-cerebrum/1. Cerebrum Docs/ADR/ADR-004-unified-project-management-system.md
+  - type: doc
+    path: n00tropic-cerebrum/n00-horizons/docs/job-pipeline.md
 ---
+
 # Job: Control Tower – Registry & Lifecycle Audits
 
 ## Objective
